@@ -62,7 +62,7 @@ public class MainMenuScreen implements Screen {
 
 		batcher.enableBlending();
 		batcher.begin();
-		batcher.draw(Assets.menu, 10, 200 - 110 / 2, 300, 110);
+		batcher.draw(Assets.menuRegion, 10, 200 - 110 / 2, 300, 110);
 		batcher.end();
 
 		if (TimeUtils.nanoTime() - last > 2000000000) {

@@ -8,6 +8,7 @@ public class Assets {
 	
 	public static Texture background;
 	public static TextureRegion backgroundRegion;
+	public static TextureRegion menuRegion;
 
 	public static Texture diverUp;
 	public static Texture diverDown;
@@ -22,7 +23,9 @@ public class Assets {
 		background = loadTexture("data/background.png");
 		backgroundRegion = new TextureRegion(background, 0, 0, 320, 480);
 		
+		
 		menu = loadTexture("data/menu.png");
+		menuRegion = new TextureRegion(menu, 0, 0, 320, 480);
 		diverUp = loadTexture("data/diverUp.png");
 		diverDown = loadTexture("data/diverDown.png");
 		mussel = loadTexture("data/mussel.png");
