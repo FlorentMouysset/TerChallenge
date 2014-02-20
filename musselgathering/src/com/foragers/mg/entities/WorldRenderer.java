@@ -25,7 +25,7 @@ public class WorldRenderer {
 	}
 	
 	public void render() {
-		camera.position.y += -Gdx.input.getAccelerometerY() * 0.1f;
+		camera.position.y += -Gdx.input.getAccelerometerY() * Gdx.graphics.getDeltaTime();
 		camera.update();
 		batch.setProjectionMatrix(camera.combined);
 		renderBackground();
