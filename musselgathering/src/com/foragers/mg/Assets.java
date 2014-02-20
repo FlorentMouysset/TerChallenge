@@ -19,8 +19,8 @@ public class Assets {
 	}
 
 	public static void load () {
-		//background = loadTexture("data/g.png");
-		//backgroundRegion = new TextureRegion(background, 0, 0, 512, 512);
+		background = loadTexture("data/g.png");
+		backgroundRegion = new TextureRegion(background, 0, 0, 512, 512);
 
 		items = loadTexture("data/bubbles.png");
 
