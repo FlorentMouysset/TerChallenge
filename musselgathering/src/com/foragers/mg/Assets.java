@@ -2,12 +2,10 @@ package com.foragers.mg;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 public class Assets {
 	
 	public static Texture background;
-	public static TextureRegion backgroundRegion;
 
 	public static Texture diver;
 	public static Texture mussel;
@@ -18,7 +16,6 @@ public class Assets {
 	
 	public static void load() {
 		background = loadTexture("data/background.png");
-		backgroundRegion = new TextureRegion(background, 0, 0, 320, 480);
 		
 		diver = loadTexture("data/diver.png");
 		mussel = loadTexture("data/mussel.png");
