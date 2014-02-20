@@ -34,12 +34,12 @@ public class World {
 		}
 	}
 	
-	public void update(float delta, float accelX) {
-		updateDiver(delta, accelX);
+	public void update(float delta, float accelX, float accelY) {
+		updateDiver(delta, accelX, accelY);
 	}
 	
-	private void updateDiver(float delta, float accelX) {
-		diver.update(delta, accelX);
+	private void updateDiver(float delta, float accelX, float accelY) {
+		diver.update(delta, accelX, accelY);
 	}
 
 }

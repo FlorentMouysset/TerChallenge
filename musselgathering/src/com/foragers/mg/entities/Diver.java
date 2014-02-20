@@ -12,8 +12,17 @@ public class Diver extends Entity {
 		state = DIVER_STATE_UP;
 	}
 	
-	public void update(float delta, float accelX) {
-		state = accelX < 0 ? DIVER_STATE_UP : DIVER_STATE_DOWN;
+	public void update(float delta, float accelX, float accelY) {
+		state = accelY < 0 ? DIVER_STATE_UP : DIVER_STATE_DOWN;
+		position.x += -accelX * delta;
+		
+		if (position.x < 0) {
+			position.x = World.WORLD_WIDTH;
+		}
+		
+		if (position.x > World.WORLD_WIDTH) {
+			position.x = 0;
+		}
 	}
 
 }

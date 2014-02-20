@@ -29,7 +29,7 @@ public class GameScreen implements Screen {
 			delta = 0.1f;
 		}
 		
-		world.update(delta, Gdx.input.getAccelerometerX());
+		world.update(delta, Gdx.input.getAccelerometerX(), Gdx.input.getAccelerometerY());
 		
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		

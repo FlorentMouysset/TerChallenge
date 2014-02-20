@@ -54,6 +54,8 @@ public class WorldRenderer {
 			case Diver.DIVER_STATE_DOWN:
 				texture = Assets.diverDown;
 				break;
+			default:
+				texture = Assets.diverUp;
 		}
 		batch.draw(texture, world.diver.position.x, world.diver.position.y, 1.5f, 1.5f);
 	}
