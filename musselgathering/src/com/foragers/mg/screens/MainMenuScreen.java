@@ -1,7 +1,5 @@
 package com.foragers.mg.screens;
 
-
-
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -28,26 +26,25 @@ public class MainMenuScreen implements Screen {
 		camera = new OrthographicCamera(320, 480);
 		camera.position.set(320 / 2, 480 / 2, 0);
 		batcher = new SpriteBatch();
-		playBounds = new Rectangle(116, 283, 75, 38); //TODO si c pas 117 c 139
-		quitBounds = new Rectangle(123, 335, 75, 38);//TODO -> 170
+		playBounds = new Rectangle(130, 165, 75, 30);
+		quitBounds = new Rectangle(130, 110, 75, 30);
 		touchPoint = new Vector3();
 	}
 
 	public void update () {
 		if (Gdx.input.justTouched()) {
 			camera.unproject(touchPoint.set(Gdx.input.getX(), Gdx.input.getY(), 0));
+			Gdx.app.log("abcdef", touchPoint.toString());
 
 			if (playBounds.contains(touchPoint.x, touchPoint.y)) {
-				//TODO Assets.playSound(Assets.clickSound);
 				game.setScreen(new GameScreen(game));
 				return;
 			}
+			
 			if (quitBounds.contains(touchPoint.x, touchPoint.y)) {
-				//Assets.playSound(Assets.clickSound);
-				//TODO exit
+				Gdx.app.exit();
 				return;
 			}
-			
 		}
 	}
 
