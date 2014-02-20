@@ -25,14 +25,10 @@ public class World {
 	}
 
 	private void generateLevel() {
-		float y = Mussel.MUSSEL_HEIGHT / 2;
-		while (y < WORLD_HEIGHT) {
+		for (int i = 0; i < 10; i++) {
 			float x = rand.nextFloat() * (WORLD_WIDTH - Mussel.MUSSEL_WIDTH) + Mussel.MUSSEL_WIDTH / 2;
-			
-			Mussel mussel = new Mussel(x, y);
-			mussels.add(mussel);
-			
-			y += rand.nextFloat();
+			float y = rand.nextFloat() * (WORLD_HEIGHT - Mussel.MUSSEL_HEIGHT) + Mussel.MUSSEL_HEIGHT / 2;
+			mussels.add(new Mussel(x, y));
 		}
 	}
 
