@@ -28,8 +28,8 @@ public class MainMenuScreen implements Screen {
 		camera = new OrthographicCamera(320, 480);
 		camera.position.set(320 / 2, 480 / 2, 0);
 		batcher = new SpriteBatch();
-		playBounds = new Rectangle(99, 117, 58, 22); //TODO si c pas 117 c 139
-		quitBounds = new Rectangle(100, 148, 58, 22);//TODO -> 170
+		playBounds = new Rectangle(116, 283, 75, 38); //TODO si c pas 117 c 139
+		quitBounds = new Rectangle(123, 335, 75, 38);//TODO -> 170
 		touchPoint = new Vector3();
 	}
 
