@@ -62,16 +62,10 @@ public class MainMenuScreen implements Screen {
 
 		batcher.enableBlending();
 		batcher.begin();
-		batcher.draw(Assets.menuRegion, 10, 200 - 110 / 2, 300, 110);
+		batcher.draw(Assets.menuRegion, 0, 0, 320, 480);
 		batcher.end();
 
 		if (TimeUtils.nanoTime() - last > 2000000000) {
-			Gdx.app.log("SuperJumper",
-				"version: " + Gdx.app.getVersion() + ", memory: " + Gdx.app.getJavaHeap() + ", " + Gdx.app.getNativeHeap()
-					+ ", native orientation:" + Gdx.input.getNativeOrientation() + ", orientation: " + Gdx.input.getRotation()
-					+ ", accel: " + (int)Gdx.input.getAccelerometerX() + ", " + (int)Gdx.input.getAccelerometerY() + ", "
-					+ (int)Gdx.input.getAccelerometerZ() + ", apr: " + (int)Gdx.input.getAzimuth() + ", " + (int)Gdx.input.getPitch()
-					+ ", " + (int)Gdx.input.getRoll());
 			last = TimeUtils.nanoTime();
 		}
 	}
