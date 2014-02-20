@@ -28,6 +28,7 @@ public class World {
 		for (int i = 0; i < 10; i++) {
 			float x = rand.nextFloat() * (WORLD_WIDTH - Mussel.MUSSEL_WIDTH) + Mussel.MUSSEL_WIDTH / 2;
 			float y = rand.nextFloat() * (WORLD_HEIGHT - Mussel.MUSSEL_HEIGHT) + Mussel.MUSSEL_HEIGHT / 2;
+			System.out.println(">" + x +" " + y);
 			mussels.add(new Mussel(x, y));
 		}
 	}
