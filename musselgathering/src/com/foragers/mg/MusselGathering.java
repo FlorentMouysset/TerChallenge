@@ -7,6 +7,7 @@ public class MusselGathering extends Game {
 
 	@Override
 	public void create() {
+		Assets.load();
 		setScreen(new GameScreen());
 	}
 
