@@ -1,5 +1,6 @@
 package com.foragers.mg.screens;
 
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL10;
@@ -15,7 +16,7 @@ public class GameScreen implements Screen {
 	World world;
 	WorldRenderer renderer;
 	
-	public GameScreen() {
+	public GameScreen(Game game) {
 		camera = new OrthographicCamera(320, 480);
 		camera.position.set(320 / 2, 480 / 2, 0);
 		batch = new SpriteBatch();

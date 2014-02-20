@@ -1,14 +1,14 @@
 package com.foragers.mg;
 
 import com.badlogic.gdx.Game;
-import com.foragers.mg.screens.GameScreen;
+import com.foragers.mg.screens.MainMenuScreen;
 
 public class MusselGathering extends Game {
 
 	@Override
 	public void create() {
 		Assets.load();
-		setScreen(new GameScreen());
+		setScreen(new MainMenuScreen(this));
 	}
 
 	@Override

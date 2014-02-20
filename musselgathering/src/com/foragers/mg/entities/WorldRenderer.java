@@ -45,7 +45,7 @@ public class WorldRenderer {
 	}
 	
 	private void renderDiver() {
-		batch.draw(Assets.diver, world.diver.position.x, world.diver.position.y, 1.5f, 1.5f);
+		batch.draw(Assets.diverUp, world.diver.position.x, world.diver.position.y, 1.5f, 1.5f);
 	}
 	
 	private void renderMussels() {
