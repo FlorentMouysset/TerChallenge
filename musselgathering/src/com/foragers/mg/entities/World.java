@@ -11,12 +11,14 @@ public class World {
 	public static final int WORLD_STATE_RUNNING = 0;
 	public static final int WORLD_STATE_GAME_OVER = 1;
 	
+	public final Diver diver;
 	public final List<Mussel> mussels;
 	public final Random rand;
 	
 	public int state;
 
 	public World() {
+		diver = new Diver(WORLD_WIDTH / 2, WORLD_HEIGHT / 2);
 		mussels = new ArrayList<Mussel>();
 		rand = new Random();
 		generateLevel();

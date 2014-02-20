@@ -9,6 +9,7 @@ public class Assets {
 	public static Texture background;
 	public static TextureRegion backgroundRegion;
 
+	public static Texture diver;
 	public static Texture mussel;
 	
 	public static Texture loadTexture(String file) {
@@ -19,6 +20,7 @@ public class Assets {
 		background = loadTexture("data/background.png");
 		backgroundRegion = new TextureRegion(background, 0, 0, 320, 480);
 		
+		diver = loadTexture("data/diver.png");
 		mussel = loadTexture("data/mussel.png");
 	}
 

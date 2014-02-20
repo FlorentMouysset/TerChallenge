@@ -39,15 +39,20 @@ public class WorldRenderer {
 	public void renderEntities() {
 		batch.enableBlending();
 		batch.begin();
+		renderDiver();
 		renderMussels();
 		batch.end();
+	}
+	
+	private void renderDiver() {
+		batch.draw(Assets.diver, world.diver.position.x, world.diver.position.y, 1.5f, 1.5f);
 	}
 	
 	private void renderMussels() {
 		int length = world.mussels.size();
 		for (int i = 0; i < length; i++) {
 			Mussel mussel = world.mussels.get(i);
-			batch.draw(Assets.mussel, mussel.position.x, mussel.position.y, 0.5f, 1);
+			batch.draw(Assets.mussel, mussel.position.x, mussel.position.y, 0.3f, 0.6f);
 		}
 	}
 	
