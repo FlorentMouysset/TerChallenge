@@ -26,6 +26,7 @@ public class WorldRenderer {
 		camera.update();
 		batch.setProjectionMatrix(camera.combined);
 		renderBackground();
+		renderEntities();
 	}
 	
 	public void renderBackground() {
@@ -46,8 +47,7 @@ public class WorldRenderer {
 		int length = world.mussels.size();
 		for (int i = 0; i < length; i++) {
 			Mussel mussel = world.mussels.get(i);
-			
-			batch.draw(Assets.mussel, mussel.position.x - 1, mussel.position.y - 0.25f, 2, 0.5f);
+			batch.draw(Assets.mussel, mussel.position.x, mussel.position.y, 0.5f, 1);
 		}
 	}
 	
