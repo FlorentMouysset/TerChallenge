@@ -3,17 +3,16 @@ package com.foragers.terchallange.logic;
 public class Score{
 
 	
-	public void AddShellToScore() {
-		// TODO Auto-generated method stub
-		
+	private int score = 0;
+	
+	
+	public void AddShellfishToScore() {
+		score += 10;
 	}
-
-
 
 	
 	public int getScore() {
-		// TODO Auto-generated method stub
-		return 0;
+		return score;
 	}
 
 
