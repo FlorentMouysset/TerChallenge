@@ -2,10 +2,15 @@ package com.foragers.terchallange.logic;
 
 public class Oxygen {
 
+	private float oxygenLevel;
 	
-	public int getDioxygenDelayRest(int deltaTime) {
-		// TODO Auto-generated method stub
-		return 0;
+	public float getDioxygenDelayRest(float deltaTime) {
+		oxygenLevel = oxygenLevel - deltaTime*0.1f;
+		return oxygenLevel;
+	}
+	
+	public void resetOxygenLevel(){
+		oxygenLevel = 100;
 	}
 	
 }
