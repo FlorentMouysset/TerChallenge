@@ -1,5 +1,6 @@
 package com.foragers.mg.entities;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -24,6 +25,7 @@ public class WorldRenderer {
 	}
 	
 	public void render() {
+		camera.position.y += -Gdx.input.getAccelerometerY() * 0.1f;
 		camera.update();
 		batch.setProjectionMatrix(camera.combined);
 		renderBackground();
@@ -33,7 +35,7 @@ public class WorldRenderer {
 	public void renderBackground() {
 		batch.disableBlending();
 		batch.begin();
-		batch.draw(Assets.background, camera.position.x - FRUSTUM_WIDTH / 2, camera.position.y - FRUSTUM_HEIGHT / 2, FRUSTUM_WIDTH, FRUSTUM_HEIGHT);
+		batch.draw(Assets.backgroundRegion, camera.position.x - FRUSTUM_WIDTH / 2, camera.position.y - FRUSTUM_HEIGHT / 2, FRUSTUM_WIDTH, FRUSTUM_HEIGHT);
 		batch.end();
 	}
 	
@@ -57,7 +59,7 @@ public class WorldRenderer {
 			default:
 				texture = Assets.diverUp;
 		}
-		batch.draw(texture, world.diver.position.x, world.diver.position.y, 1.5f, 1.5f);
+		batch.draw(texture, world.diver.position.x, camera.position.y, 1.5f, 1.5f);
 	}
 	
 	private void renderMussels() {

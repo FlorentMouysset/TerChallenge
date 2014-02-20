@@ -7,7 +7,7 @@ import java.util.Random;
 public class World {
 
 	public static final float WORLD_WIDTH = 9.5f;
-	public static final float WORLD_HEIGHT = 14;
+	public static final float WORLD_HEIGHT = 14 * 20;
 	public static final int WORLD_STATE_RUNNING = 0;
 	public static final int WORLD_STATE_GAME_OVER = 1;
 	
@@ -27,7 +27,7 @@ public class World {
 	}
 
 	private void generateLevel() {
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 100; i++) {
 			float x = rand.nextFloat() * WORLD_WIDTH;
 			float y = rand.nextFloat() * WORLD_HEIGHT;
 			mussels.add(new Mussel(x, y));
