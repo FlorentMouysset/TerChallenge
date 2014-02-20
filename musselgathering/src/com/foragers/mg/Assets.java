@@ -7,7 +7,8 @@ public class Assets {
 	
 	public static Texture background;
 
-	public static Texture diver;
+	public static Texture diverUp;
+	public static Texture diverDown;
 	public static Texture mussel;
 	
 	public static Texture loadTexture(String file) {
@@ -17,7 +18,8 @@ public class Assets {
 	public static void load() {
 		background = loadTexture("data/background.png");
 		
-		diver = loadTexture("data/diver.png");
+		diverUp = loadTexture("data/diverUp.png");
+		diverDown = loadTexture("data/diverDown.png");
 		mussel = loadTexture("data/mussel.png");
 	}
 
