@@ -10,14 +10,12 @@ public class Breath {
 	}
 	
 	public float getBreathLevel(float deltaTime){
-		breathLevel = breathLevel - deltaTime*0.1f;
-		return breathLevel;
+		this.breathLevel = this.breathLevel - deltaTime*0.1f;
+		return this.breathLevel;
 	}
 	
-	
 	public void takeABreath(){
-		this.oxygen.takeABreath();
-		breathLevel = 10;
+		this.breathLevel = this.oxygen.takeABreath();
 	}
 	
 }

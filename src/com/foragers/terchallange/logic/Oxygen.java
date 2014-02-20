@@ -5,15 +5,19 @@ public class Oxygen {
 	private float oxygenLevel;
 	
 	public float getDioxygenLevel() {
-		return oxygenLevel;
+		return this.oxygenLevel;
 	}
 	
 	public void resetOxygenLevel(){
-		oxygenLevel = 100;
+		this.oxygenLevel = 100;
 	}
 
-	public void takeABreath() {
-		oxygenLevel -= 10;
+	public float takeABreath() {
+		this.oxygenLevel -= 10;
+		if(this.oxygenLevel<0){
+			this.oxygenLevel=0;
+		}
+		return this.oxygenLevel;
 	}
 	
 }
