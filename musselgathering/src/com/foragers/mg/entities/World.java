@@ -33,5 +33,13 @@ public class World {
 			mussels.add(new Mussel(x, y));
 		}
 	}
+	
+	public void update(float delta, float accelX, float accelY) {
+		updateDiver(delta, accelX, accelY);
+	}
+	
+	private void updateDiver(float delta, float accelX, float accelY) {
+		diver.update(delta, accelX, accelY);
+	}
 
 }

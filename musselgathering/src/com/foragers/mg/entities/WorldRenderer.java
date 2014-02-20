@@ -1,6 +1,7 @@
 package com.foragers.mg.entities;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.foragers.mg.Assets;
@@ -45,7 +46,18 @@ public class WorldRenderer {
 	}
 	
 	private void renderDiver() {
-		batch.draw(Assets.diverUp, world.diver.position.x, world.diver.position.y, 1.5f, 1.5f);
+		Texture texture;
+		switch (world.diver.state) {
+			case Diver.DIVER_STATE_UP:
+				texture = Assets.diverUp;
+				break;
+			case Diver.DIVER_STATE_DOWN:
+				texture = Assets.diverDown;
+				break;
+			default:
+				texture = Assets.diverUp;
+		}
+		batch.draw(texture, world.diver.position.x, world.diver.position.y, 1.5f, 1.5f);
 	}
 	
 	private void renderMussels() {
